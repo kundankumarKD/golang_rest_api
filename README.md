@@ -1,3 +1,19 @@
+================================================================================================================================================================
+To install go locally::::::::========>>>>>>>>>>
+wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+mkdir -p .go_runtime
+tar -C .go_runtime -xzf go1.22.0.linux-amd64.tar.gz
+rm go1.22.0.linux-amd64.tar.gz
+export GOROOT=$(pwd)/.go_runtime/go
+export PATH=$GOROOT/bin:$PATH
+export GOPATH=$(pwd)/.go_path
+
+****************************************************************************************************************************************************************
+
+
+
+
+
 # Go Product API
 
 A REST API for User Authentication and Product CRUD operations, built with Go, Gin, Gorm, and SQLite.
@@ -94,3 +110,7 @@ go run cmd/api/main.go
 -   `make test`: Run tests.
 -   `make docker-build`: Build Docker image.
 -   `make docker-run`: Run Docker container.
+
+
+
+
